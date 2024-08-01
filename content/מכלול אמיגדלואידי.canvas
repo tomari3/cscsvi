@@ -1,0 +1,37 @@
+{
+	"nodes":[
+		{"id":"3dd9ad27525f9a26","type":"group","x":-860,"y":520,"width":1280,"height":1020,"label":"אמיגדלה"},
+		{"id":"8c01f7858b3afc92","type":"group","x":-1260,"y":1760,"width":2040,"height":460,"label":"פלט"},
+		{"id":"421319b36b4d2621","type":"group","x":-2260,"y":60,"width":440,"height":1480,"label":"אזורים קורטיקלים"},
+		{"id":"c2070dbe5fcb10e2","type":"group","x":-860,"y":-40,"width":1280,"height":460,"label":"קלט"},
+		{"id":"c6fd4a84e8dd4b7f","type":"file","file":"פסיכולוגיה פיזיולוגית/תלמוס.md","x":-1461,"y":980,"width":400,"height":400},
+		{"id":"69cce44eaf07aee3","type":"file","file":"פסיכולוגיה פיזיולוגית/תלמוס.md","x":0,"y":0,"width":400,"height":400},
+		{"id":"ba5f93348e2579f2","type":"file","file":"פסיכולוגיה פיזיולוגית/היפוקמפוס.md","x":-420,"y":0,"width":400,"height":400},
+		{"id":"c3306d4eb55c6f82","type":"file","file":"גרעין מרכזי.md","x":-840,"y":1120,"width":400,"height":400},
+		{"id":"52738be02ed59317","type":"file","file":"גרעין צידי.md","x":-840,"y":560,"width":400,"height":400},
+		{"id":"8f6d5c3d77015839","type":"file","file":"קורטקס קדם מצחי גחוני מדיאלי.md","x":-2240,"y":80,"width":400,"height":400},
+		{"id":"69729d65c7ac5cf0","type":"file","file":"פסיכולוגיה פיזיולוגית/קורטקס קדם מצחי.md","x":-2240,"y":600,"width":400,"height":400},
+		{"id":"ce0bc0e3645a441d","type":"file","file":"גרעין מסד.md","x":0,"y":800,"width":400,"height":400},
+		{"id":"010dcafc88edbed4","type":"file","file":"פסיכולוגיה פיזיולוגית/היפותלמוס.md","x":-174,"y":1800,"width":400,"height":400},
+		{"id":"88ee3b8cc7cd7de9","type":"file","file":"פסיכולוגיה פיזיולוגית/המוח האמצעי.md","x":-1240,"y":1800,"width":400,"height":400},
+		{"id":"0ea416398234cd49","type":"file","file":"פסיכולוגיה פיזיולוגית/גשר.md","x":-707,"y":1800,"width":400,"height":400},
+		{"id":"c53621d5efa7a4fd","type":"file","file":"פסיכולוגיה פיזיולוגית/מוח מוארך.md","x":360,"y":1800,"width":400,"height":400},
+		{"id":"4f6e08ca5033b809","type":"file","file":"פסיכולוגיה פיזיולוגית/נאוקורטקס.md","x":-840,"y":0,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"06bfceb10ab9115b","fromNode":"4f6e08ca5033b809","fromSide":"bottom","toNode":"52738be02ed59317","toSide":"top"},
+		{"id":"b290d4c990e027ca","fromNode":"ba5f93348e2579f2","fromSide":"bottom","toNode":"52738be02ed59317","toSide":"top"},
+		{"id":"6dbc64fc24b788df","fromNode":"69cce44eaf07aee3","fromSide":"bottom","toNode":"52738be02ed59317","toSide":"top"},
+		{"id":"f26fc4aa13a1676e","fromNode":"52738be02ed59317","fromSide":"right","toNode":"ce0bc0e3645a441d","toSide":"top"},
+		{"id":"92ea6232d1cfa7af","fromNode":"52738be02ed59317","fromSide":"bottom","toNode":"c3306d4eb55c6f82","toSide":"top"},
+		{"id":"60ce455976f40904","fromNode":"ce0bc0e3645a441d","fromSide":"bottom","toNode":"c3306d4eb55c6f82","toSide":"right"},
+		{"id":"3e52dbb5f6f8e497","fromNode":"52738be02ed59317","fromSide":"left","toNode":"c6fd4a84e8dd4b7f","toSide":"right"},
+		{"id":"7d67d1f50f92db43","fromNode":"c6fd4a84e8dd4b7f","fromSide":"left","toNode":"421319b36b4d2621","toSide":"right"},
+		{"id":"cad6b581a3b5ff2d","fromNode":"8f6d5c3d77015839","fromSide":"right","toNode":"52738be02ed59317","toSide":"left"},
+		{"id":"7256b13021f5d6d5","fromNode":"ce0bc0e3645a441d","fromSide":"left","toNode":"8f6d5c3d77015839","toSide":"bottom"},
+		{"id":"ecb79a33d2af58d0","fromNode":"c3306d4eb55c6f82","fromSide":"bottom","toNode":"88ee3b8cc7cd7de9","toSide":"top"},
+		{"id":"72ba652085d59c3b","fromNode":"c3306d4eb55c6f82","fromSide":"bottom","toNode":"0ea416398234cd49","toSide":"top"},
+		{"id":"440bc1d3d9bdb267","fromNode":"c3306d4eb55c6f82","fromSide":"bottom","toNode":"010dcafc88edbed4","toSide":"top"},
+		{"id":"4ea26e4b23116910","fromNode":"c3306d4eb55c6f82","fromSide":"bottom","toNode":"c53621d5efa7a4fd","toSide":"top"}
+	]
+}

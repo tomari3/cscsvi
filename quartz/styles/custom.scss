@@ -1,3 +1,85 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// live-previews
+
+.popover .image-captions-figure {
+  display: none;
+  margin: 0;
+}
+
+.popover .image-embed {
+  width: 0;
+  height: 0;
+  display: none;
+  opacity: 0;
+}
+
+.popover img {
+  opacity: 0;
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+// inline images
+
+/* This snippet requires Contextual Typography 2.2.1+ */
+/* https://github.com/mgmeyers/obsidian-contextual-typography */
+
+:root {
+  --content-base-width: 45rem;
+}
+
+/* ----------------------------------------- */
+/* Handle overall content width */
+/* ----------------------------------------- */
+
+/* Wrapper with padding keeps content from bumping the edges */
+
+
+/* ----------------------------------------- */
+/* Make media items display in rows */
+/* ----------------------------------------- */
+
+/* p tags wrap each row */
+article > p:has(img) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-gap: var(--media-grid-gap, 7px);
+  margin: 0;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+
+/* Remove breaks from the document flow */
+article > p:has(img)
+  br {
+  display: none;
+}
+
+/* Apply this to all img/video tags in a row whether they're wrapped in a span or not */
+article > p:has(img)
+  video {
+  flex: 1;
+  align-self: stretch;
+  object-fit: cover;
+  max-width: 100%; /* Ensure images don't overflow */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Changed from cover to contain */
+  border-radius: var(--media-border-radius, 4px);
+}
+
+/* Create gaps between rows */
+article:has(p:has(img)) {
+  margin-top: var(--media-grid-gap, 7px);
+}
+
+/* Add responsive behavior */
+@media (max-width: 768px) {
+  article > p:has(img) {
+    flex-direction: column;
+  }
+}
