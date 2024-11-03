@@ -1,4 +1,4 @@
-# 1	Preface
+## 0.1	Preface
 - Since the publication of this book the language C and computers in general changed A LOT.
 - ANSI aimed to produce "an unambiguous and machine independent definition of the language C". It is the ANSI standard for C.
 	- Gave constructors and enumerations
@@ -8,7 +8,7 @@
 		- mem management
 		- string manipulation
 
-## 1.1	Preface to the first edition
+## 0.2	Preface to the first edition
 - C is a general purpose programming language
 	- features economy of expression
 	- modern flow control and data structures
@@ -19,7 +19,7 @@
 - This book is a tutorial
 - This book assumes basic programming knowledge, and itsnt intro to programming
 
-# 2	Tutorial Introduction
+# 1	Tutorial Introduction
 - Brief example that include basic concepts for a program
 	- variables
 	- constants
@@ -27,7 +27,7 @@
 	- control flow
 	- functions
 	- IO
-## 2.1	Hello World
+## 1.1	Hello World
 ```c
 #include <stdio.h>
 
@@ -48,7 +48,7 @@ main()
 
 - A *function* gets *arguemnts* written inside its `()` and has *statements* written inside its `{}`. It ends with `;` signifying end of *statement*
 - `\n` is an escape sequence and a newline character
-## 2.2	Variables and Arithmetic Expressions
+## 1.2	Variables and Arithmetic Expressions
 ```C
 #include <stdio.h>
 /* print Fahrenheit-Celsius table
@@ -130,7 +130,7 @@ Process finished with exit code 0
 | %6f            | print as floating point, at least 6 characters wide                           |
 | %.2f           | print as floating point, 2 characters after decimal point                     |
 | %6.2f          | print as floating point, at least 6 characters wide and 2 after decimal point |
-## 2.3	The For Statement
+## 1.3	The For Statement
 ```c
 #include <stdio.h>
 
@@ -142,7 +142,7 @@ main ()
 }
 ```
 - `for (` start; limit; increments (or decrements); `)`
-## 2.4	Symbolic Constants
+## 1.4	Symbolic Constants
 - dont use 'magic numbers', give everything a name, use a constant if possible.
 	- makes the code clean, clear and understanable
 	- do it using `#define`
@@ -166,12 +166,12 @@ main()
 		printf("%3d %6.1f\n", fahr, (5.0/9.0)*(fahr-32));
 }
 ```
-## 2.5	Character I/O
+## 1.5	Character I/O
 - input and output text is dealt as `text stream`
 	- a sequence of characters followerd by a newline character
 	- proccesed by a library
 	- `c = getchar()`; gets the next character each time
-### 2.5.1	File Copying
+### 1.5.1	File Copying
 ```c
 #include <stdio.h>
 
@@ -186,7 +186,7 @@ main ()
 }
 ```
 - `EOF` is an *integer* defined in `stdio.h` that is different from any *char* value and is defined by [[The ANSI C Programming Language#2.4 Symbolic Constants]]
-### 2.5.2	Character Counting
+### 1.5.2	Character Counting
 ```c
 #include <stdio.h>
 
@@ -204,7 +204,7 @@ main()
 - `++nc`: increment by one. `++nc` $\neq$ `nc++`
 - `long` is 32 bits, less likely to overflow than 16 bits which hold $\frac{2^{16}}{2}-1=32767$ positive integers. 1 position for `0`, half for negative integers and half for positive integers.
 - `ld` tells `printf` to print a *long* integer
-### 2.5.3	Line Counting
+### 1.5.3	Line Counting
 ```c
 #include <stdio.h>
 
@@ -222,7 +222,7 @@ main()
 ```
 - $==$ checks equality
 - `''` integers value equal to the numerical value of the character in the machines character set (ASCII)
-### 2.5.4	Word Counting
+### 1.5.4	Word Counting
 ```c
 #include <stdio.h>
 
@@ -250,13 +250,13 @@ main()
 }
 ```
 - expressions containing `||`, '&&' are read left to right
-## 2.6	Arrays
+## 1.6	Arrays
 ```c
 #include <stdio.h>
 
 main()
 {
-	int c, i, white, nother;
+	int c, i, nwhite, nother;
 	int ndigit[10];
 
 	nwhite = nother = 0;
@@ -275,5 +275,106 @@ main()
 	for (i = 0; i < 10; ++i)
 		printf(" %d", ndigit[i]);
 	printf(", white space = %d, other = %d\n", nwhite, nother);
+}
+```
+
+## 1.7	Functions
+
+```
+return-type function-name(parameter declarations, if any)
+{
+	declarations
+	statements
+}
+```
+
+### 1.7.1	Power
+
+```c
+#include <stdio.io>
+
+int power(int m, int n)
+
+// test
+main()
+{
+	int i;
+
+	for (i = 0; i < 10; ++i)
+		printf("%d %d %d\n", i, power(2,i), power(-3,i));
+}
+
+// power
+int power(int base, int n)
+{
+	int i, p;
+
+	p = 1;
+	for (i = 1; i <= n; ++i)
+		p = p * base;
+	return p;
+}
+```
+
+## 1.8	Arguments - Call by Value
+
+```c
+// power: raise base to n-th power
+int power(int base, int n)
+{
+	int p
+
+	for (p = 1; n > 0; --n)
+		p = p * base;
+	return p;
+}
+```
+
+## 1.9	Character Arrays
+
+```c
+#include <stdio.h>
+#define MAXLINE 1000
+
+int getline(char line[], int maxline);
+void copy(char to[], char from[]);
+
+main()
+{
+int len;
+int max;
+char line[MAXLINE];
+char longest[MAXLINE];
+
+max = 0;
+while ((len = getline(line, MAXLINE)) > 0)
+	if (len > max)
+		max = len;
+		copy(longest, line);
+	if (max > 0)
+		printf("%s", longest);
+	return 0;
+}
+
+int getline(char s[], int lim)
+{
+	int c, i;
+
+	for (i = 0; i < lim - 1 && (c=getchar()) != EOF && c!='\n'; i++)
+		s[i] = c;
+	if (c == '\n')
+		s[i] = c;
+		++i;
+	s[i] = '\0';
+	return i;
+}
+
+void copy(char to[], char from[])
+{
+	int i;
+
+	i = 0;
+	while ((to[i] = from[i]) != '\0')
+		++i;
 }
 ```
