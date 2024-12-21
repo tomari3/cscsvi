@@ -80,11 +80,11 @@
 
 - **Key Arguments:**
 
-- **Uniformity:** Each region consistently observed across studies and labs
-
-- **Strong Reactions:** Regions respond twice as strongly to preferred stimuli
-
-- **Region of Interest (ROI):** Regions can be easily found in healthy subjects
+	- **Uniformity:** Each region consistently observed across studies and labs
+	
+	- **Strong Reactions:** Regions respond twice as strongly to preferred stimuli
+	
+	- **Region of Interest (ROI):** Regions can be easily found in healthy subjects
 
   
 
@@ -92,7 +92,7 @@
 
   
 
-- **Location:** Mid fusiform gyrus on the bottom surface of the [[cerebral cortex]], just above the [[cerebellum]]
+- **Location:** Mid fusiform gyrus on the bottom surface of the [[קורטקס מוחי|cerebral cortex]], just above the [[מוחון|cerebellum]]
 
 - **Function:** Responds to faces
 
@@ -291,3 +291,5 @@
 - Are there cases where a region arise in several occasions, or changes its place?
 - Can regions change or adapt their function?
 - What is the scope of a specialized region like the FFA? Recognition alone or reason, race, sex, etc.?
+
+[[The_Architechture_of_the_Brain]]
