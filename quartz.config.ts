@@ -8,12 +8,13 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
-    pageTitleSuffix: "",
+    pageTitle: "CS&CS",
+    pageTitleSuffix: "vault of information",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "umami",
+      host: "cloud.umami.is",
       websiteId: "9046f156-ab86-4690-8407-832382b859b5",
     },
     locale: "en-US",
