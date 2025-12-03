@@ -1,0 +1,6 @@
+- מערך כלים ליצירה, בדיקה ועריכה של תוכנה.
+- integrated development enviornments כלים שלובים עם צג נוח.
+- debugger עוזר למצוא ולתקן באגים
+- SDK או JDK זה Java Software Development Kit
+- ללא GUI, משמע אינו IDE אך מכיל כלים לעריכת Java
+- 

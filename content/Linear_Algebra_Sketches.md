@@ -1,0 +1,1 @@
+$$\begin{align*} \sum_{i=0}^{n-1}\left(\frac{1}{x + i} - \frac{1}{x + i + 1}\right) &= \left(\frac{1}{x} - \frac{1}{x + 1}\right) + \left(\frac{1}{x + 1} - \frac{1}{x + 2}\right) + \cdots + \left(\frac{1}{x + n-1} - \frac{1}{x + n}\right) \end{align*}$$

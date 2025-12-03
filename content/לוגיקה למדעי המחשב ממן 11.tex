@@ -1,0 +1,177 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={לוגיקה למדעי המחשב ממן 11},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{לוגיקה למדעי המחשב ממן 11}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+לוגיקה למדעי המחשב\\
+ממן 11\\
+תום ארי
+
+\section{שאלה 1}\label{ux5e9ux5d0ux5dcux5d4-1}
+
+\begin{enumerate}
+\tightlist
+\item
+  המחרוזת {} \textbf{אינה} פסוק מאחר משני סיבות:
+
+  \begin{enumerate}
+  \tightlist
+  \item
+    מספר הסוגריים אינו מאוזן בסיפא של המחרוזת
+  \item
+    בסיפא של המחרוזת ישנו קשר דו מקומי שאינו מקיים {}. זוהי שגיאה
+    תחבירית
+  \end{enumerate}
+\item
+  המחרוזת {} \textbf{אכן} מחרוזת, נראה את עץ הבניה שלה באיור הבא
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \pandocbounded{\includegraphics[keepaspectratio]{/Users/tom/Obsidian Vault/Pasted image 20250323215949.png}}
+  \item
+    דרגת העץ היא \textbf{6}
+  \item
+    נבנה סדרות בניה:
+  \end{itemize}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  המחרוזת {} \textbf{אכן} מחרוזת, נראה את עץ הבנייה שלה באיור הבא
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \pandocbounded{\includegraphics[keepaspectratio]{/Users/tom/Obsidian Vault/Pasted image 20250323220909.png}}
+  \item
+    דרגת העץ היא \textbf{6}
+  \item
+    נבנה סדרת בניה
+  \end{itemize}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{enumerate}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  המחרוזת {} \textbf{אינה} מחרוזת משני סיבות:
+
+  \begin{enumerate}
+  \tightlist
+  \item
+    מספר הסוגריים אינו מאוזן
+  \item
+    בסיפא של המחרוזת ישנו קשר דו מקומי שאינו מקיים {}. זוהי שגיאה
+    תחבירית
+  \end{enumerate}
+\item
+  המחרוזת {} \textbf{אינה} פסוק. קל לראות כי {} אינו פסוק, בדומה לדוגמא
+  2.1, עמוד 72 בספר לוגיקה למדעי המחשב
+\end{enumerate}
+
+\section{שאלה 2}\label{ux5e9ux5d0ux5dcux5d4-2}
+
+\begin{itemize}
+\tightlist
+\item
+  נוכיח בעזרת אינדוקציה מבנית שאם מספר הפסוקים האלמנטריים בפסוק נתון הוא
+  {} ומספר הקשרים הדו מקומיים הוא {} אזי {}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    המשוואה {} מתקיימת אםם {} שניהם זוגיים או אי זוגיים בהתאמה. נוכיח
+    באינדוקציה על המספרים הטבעיים. עבור {} נקבל {} הנחת האינדוקציה היא
+    שעבור פסוקים {} מתקיים {}, {} אתא נפריד למקרים
+
+    \begin{enumerate}
+    \tightlist
+    \item
+      {} פסוק אלמנטרי: לא מתקיים שום סוג קשר ולכן ברור כי {}
+    \item
+      {} פסוק שלילה: אינו מוסיף פסוק אלמנטרי, אינו קשר דו מקומי. אינו
+      משפיע על {}
+    \item
+      {} קשר דו מקומי: מספר הפסוקים האלמנטריים הוא {}, מספר הקשרים הדו
+      מקומיים הוא {} משמע מתקיים {} מאחר והוספנו קשר יחיד. מתוך הנחת
+      האינדוקציה נקבל {} משוואה זו נכונה רק אם לשני הצדדים זוגיים או אי
+      זוגיים בהתאמה, באופן דומה להגדרה. הראנו כי היחס בין {} מתקיים עבור
+      כל מספר פסוקים אלמנטריים, ומספר קשרים דו מקומיים.
+    \end{enumerate}
+  \end{itemize}
+\end{itemize}
+
+\end{document}
